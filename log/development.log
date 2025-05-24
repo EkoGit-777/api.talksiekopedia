@@ -1,0 +1,872 @@
+Started GET "/" for 127.0.0.1 at 2025-05-19 22:44:17 +0700
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.0ms | GC: 1.5ms)
+Completed 200 OK in 193ms (Views: 34.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 20.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-20 09:26:54 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 6.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-20 14:26:31 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.6ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 11.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-20 21:26:14 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-05-20 15:14:03.945590', '2025-05-20 15:14:03.945594') RETURNING "key" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "avatar" varchar, "passcode" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520151031') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:30:07 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | GC: 0.0ms)
+Completed 200 OK in 134ms (Views: 60.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/application-bfcdf840.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/turbo.min-1262d735.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-05-20 22:30:08 +0700
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:32:12 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 13.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | GC: 0.0ms)
+Completed 200 OK in 102ms (Views: 51.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mUser Create (8.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "avatar", "passcode", "created_at", "updated_at") VALUES ('Eko', 'test', NULL, '2025-05-20 15:33:22.892667', '2025-05-20 15:33:22.892667') RETURNING "id" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:33:31 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 10.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:33:34 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 17.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='ApiTalsksiekopedia'*/[0m
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:34:09 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:34:34 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:1
+  Rendered users/index.html.erb within layouts/application (Duration: 232.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 244.3ms | GC: 0.0ms)
+Completed 200 OK in 269ms (Views: 220.7ms | ActiveRecord: 26.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-20 22:36:11 +0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/views/users/index.html.erb:4
+  Rendered users/index.html.erb within layouts/application (Duration: 25.2ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | GC: 0.2ms)
+Completed 200 OK in 56ms (Views: 30.9ms | ActiveRecord: 5.6ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (182.8ms)[0m  [1m[35mDROP TABLE "users" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250520151031' /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-05-21 13:02:34 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20250520151031_create_users.rb
+db/migrate/20250520155616_create_rooms.rb
+db/migrate/20250520155950_create_room_messages.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.15) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.15) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.15) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-21 13:02:34 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 3 pending migrations:
+
+db/migrate/20250520151031_create_users.rb
+db/migrate/20250520155616_create_rooms.rb
+db/migrate/20250520155950_create_room_messages.rb
+
+
+):
+  
+activerecord (8.0.2) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.2) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.2) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.2) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.2) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.15) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.15) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.15) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (156.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "avatar" varchar, "passcode" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520151031') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRooms (20250520155616)
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRooms (20250520155616)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "participant_1_id" integer, "participant_2_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_31d2705a4f"
+FOREIGN KEY ("participant_1_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ece5fc565c"
+FOREIGN KEY ("participant_2_id")
+  REFERENCES "users" ("id")
+) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_rooms_on_participant_1_id" ON "rooms" ("participant_1_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_rooms_on_participant_2_id" ON "rooms" ("participant_2_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_rooms_on_name" ON "rooms" ("name") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520155616') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (157.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRoomMessages (20250520155950)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "room_messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer NOT NULL, "user_id" integer NOT NULL, "message" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8ed44f6e34"
+FOREIGN KEY ("room_id")
+  REFERENCES "rooms" ("id")
+, CONSTRAINT "fk_rails_76bc7b974e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_room_messages_on_room_id" ON "room_messages" ("room_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE INDEX "index_room_messages_on_user_id" ON "room_messages" ("user_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520155950') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-05-21 13:10:08 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 96ms (Views: 13.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2025-05-23 09:54:42 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ekosutrisno/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 101ms (Views: 15.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 10:41:27 +0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" IS NOT NULL /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#index'
+Completed 200 OK in 140ms (Views: 9.0ms | ActiveRecord: 17.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-05-23 10:41:28 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for 127.0.0.1 at 2025-05-23 17:05:20 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (48.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '1234567890' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#index'
+Completed 200 OK in 327ms (Views: 76.0ms | ActiveRecord: 48.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:07:55 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "tes"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Content in 27ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (Can't verify CSRF token authenticity.):
+  
+actionpack (8.0.2) lib/action_controller/metal/request_forgery_protection.rb:314:in 'ActionController::RequestForgeryProtection::ProtectionMethods::Exception#handle_unverified_request'
+actionpack (8.0.2) lib/action_controller/metal/request_forgery_protection.rb:408:in 'ActionController::RequestForgeryProtection#handle_unverified_request'
+actionpack (8.0.2) lib/action_controller/metal/request_forgery_protection.rb:397:in 'ActionController::RequestForgeryProtection#verify_authenticity_token'
+activesupport (8.0.2) lib/active_support/callbacks.rb:361:in 'block in ActiveSupport::Callbacks::CallTemplate::MethodCall#make_lambda'
+activesupport (8.0.2) lib/active_support/callbacks.rb:178:in 'block in ActiveSupport::Callbacks::Filters::Before#call'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:34:in 'block (2 levels) in <module:Callbacks>'
+activesupport (8.0.2) lib/active_support/callbacks.rb:179:in 'ActiveSupport::Callbacks::Filters::Before#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in 'block in ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in 'Array#each'
+activesupport (8.0.2) lib/active_support/callbacks.rb:559:in 'ActiveSupport::Callbacks::CallbackSequence#invoke_before'
+activesupport (8.0.2) lib/active_support/callbacks.rb:118:in 'block in ActiveSupport::Callbacks#run_callbacks'
+activesupport (8.0.2) lib/active_support/callbacks.rb:140:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/abstract_controller/callbacks.rb:260:in 'AbstractController::Callbacks#process_action'
+actionpack (8.0.2) lib/action_controller/metal/rescue.rb:27:in 'ActionController::Rescue#process_action'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:76:in 'block in ActionController::Instrumentation#process_action'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'block in ActiveSupport::Notifications.instrument'
+activesupport (8.0.2) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activesupport (8.0.2) lib/active_support/notifications.rb:210:in 'ActiveSupport::Notifications.instrument'
+actionpack (8.0.2) lib/action_controller/metal/instrumentation.rb:75:in 'ActionController::Instrumentation#process_action'
+actionpack (8.0.2) lib/action_controller/metal/params_wrapper.rb:259:in 'ActionController::ParamsWrapper#process_action'
+activerecord (8.0.2) lib/active_record/railties/controller_runtime.rb:39:in 'ActiveRecord::Railties::ControllerRuntime#process_action'
+actionpack (8.0.2) lib/abstract_controller/base.rb:163:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.15) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.15) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.15) lib/rack/conditional_get.rb:43:in 'Rack::ConditionalGet#call'
+rack (3.1.15) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.15) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.15) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.15) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:10:29 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "tes"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (6.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = '0TcrxMPtI00' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 50.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method 'passcode' for an instance of UsersController):
+  
+app/controllers/users_controller.rb:14:in 'UsersController#create'
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:14:11 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "tes"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = '-e1tyXsSF4I' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (8.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Fenixia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Create (3.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "avatar", "passcode", "created_at", "updated_at") VALUES ('Fenixia', 'tes', '-e1tyXsSF4I', '2025-05-23 10:14:11.852577', '2025-05-23 10:14:11.852577') RETURNING "id" /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (5.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 200 OK in 331ms (Views: 11.8ms | ActiveRecord: 34.9ms (3 queries, 0 cached) | GC: 4.8ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2025-05-23 17:14:48 +0700
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (8.0.2) lib/abstract_controller/base.rb:158:in 'AbstractController::Base#process'
+actionview (8.0.2) lib/action_view/rendering.rb:40:in 'ActionView::Rendering#process'
+actionpack (8.0.2) lib/action_controller/metal.rb:252:in 'ActionController::Metal#dispatch'
+actionpack (8.0.2) lib/action_controller/metal.rb:335:in 'ActionController::Metal.dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:67:in 'ActionDispatch::Routing::RouteSet::Dispatcher#dispatch'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:50:in 'ActionDispatch::Routing::RouteSet::Dispatcher#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in 'block in ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in 'block in ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'Array#each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in 'ActionDispatch::Journey::Router#find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in 'ActionDispatch::Journey::Router#serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in 'ActionDispatch::Routing::RouteSet#call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in 'Rails::Engine::LazyRouteSet#call'
+rack (3.1.15) lib/rack/tempfile_reaper.rb:20:in 'Rack::TempfileReaper#call'
+rack (3.1.15) lib/rack/etag.rb:29:in 'Rack::ETag#call'
+rack (3.1.15) lib/rack/conditional_get.rb:31:in 'Rack::ConditionalGet#call'
+rack (3.1.15) lib/rack/head.rb:15:in 'Rack::Head#call'
+actionpack (8.0.2) lib/action_dispatch/http/permissions_policy.rb:38:in 'ActionDispatch::PermissionsPolicy::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/http/content_security_policy.rb:38:in 'ActionDispatch::ContentSecurityPolicy::Middleware#call'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:274:in 'Rack::Session::Abstract::Persisted#context'
+rack-session (2.1.1) lib/rack/session/abstract/id.rb:268:in 'Rack::Session::Abstract::Persisted#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/cookies.rb:706:in 'ActionDispatch::Cookies#call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.15) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.15) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.15) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.2) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started GET "/user" for 127.0.0.1 at 2025-05-23 17:15:06 +0700
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '-e1tyXsSF4I' LIMIT 1 /*action='show',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:20:in 'UsersController#show'
+Completed 200 OK in 247ms (Views: 14.5ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 17:15:13 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '-e1tyXsSF4I' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 68ms (Views: 42.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 17:15:21 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" IS NOT NULL /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:19:55 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "sdgsgdsgd"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (3.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = '1oFd01ZhHXY' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (5.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Fenixia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 200 OK in 76ms (Views: 12.6ms | ActiveRecord: 9.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 17:21:20 +0700
+Processing by UsersController#index as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "sdgsgdsgd"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" IS NOT NULL /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 76ms (Views: 46.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:22:59 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "sdgsgdsgd"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = 'vihYB_utCQY' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Fenixia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 200 OK in 31ms (Views: 1.4ms | ActiveRecord: 3.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:25:34 +0700
+  
+SyntaxError (/home/ekosutrisno/api.talsksiekopedia/app/controllers/users_controller.rb:30: syntax errors found
+  [2m28 | [m    end
+  [2m29 | [m  end
+[1;31m> [m[2m30 | [mend
+  [2m   | [m   [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+[1;31m> [m[2m31 | [m
+  [2m   | [m[1;31m^[m expected an `end` to close the `class` statement
+):
+  
+app/controllers/users_controller.rb:30: syntax errors found
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:25:51 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "sdgsgdsgd"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = 'L5Es2-5SUYk' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Fenixia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 9.0ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method 'user' for an instance of UsersController):
+  
+app/controllers/users_controller.rb:16:in 'UsersController#create'
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:26:07 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Fenixia", "avatar" => "sdgsgdsgd"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = 'CZDqy37kDN0' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (2.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Fenixia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 200 OK in 140ms (Views: 1.1ms | ActiveRecord: 8.4ms (2 queries, 0 cached) | GC: 1.8ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2025-05-23 17:26:32 +0700
+Processing by UsersController#create as */*
+  Parameters: {"name" => "Ekopedia", "avatar" => "sdgsgdsgd"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:12:in 'block in UsersController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Exists? (11.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = 'Ekopedia' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "avatar", "passcode", "created_at", "updated_at") VALUES ('Ekopedia', 'sdgsgdsgd', '_6yPsu7tp-4', '2025-05-23 10:26:33.157569', '2025-05-23 10:26:33.157569') RETURNING "id" /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:14:in 'UsersController#create'
+Completed 200 OK in 232ms (Views: 10.4ms | ActiveRecord: 18.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 18:36:44 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (28.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 438ms (Views: 139.9ms | ActiveRecord: 28.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 18:38:24 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (7.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (22.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 500 Internal Server Error in 425ms (ActiveRecord: 41.7ms (2 queries, 0 cached) | GC: 15.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^)
+Caused by: SQLite3::SQLException (no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^)
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^):
+  
+app/controllers/users_controller.rb:6:in 'UsersController#index'
+Started GET "/users" for 127.0.0.1 at 2025-05-23 18:38:50 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (3.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 15.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^)
+Caused by: SQLite3::SQLException (no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^)
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: rooms.participant_1:
+SELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1" = '1' /*action='index',application='ApiTalsksiekopedia',controller='users'*/
+                                    ^):
+  
+app/controllers/users_controller.rb:6:in 'UsersController#index'
+Started GET "/users" for 127.0.0.1 at 2025-05-23 18:40:45 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (169.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_2_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 735ms (Views: 458.8ms | ActiveRecord: 179.0ms (3 queries, 0 cached) | GC: 316.5ms)
+
+
+Started GET "/rooms" for 127.0.0.1 at 2025-05-23 18:44:22 +0700
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (2.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE (participant_1_id = NULL AND participant_2_id < NULL) /*action='index',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:5:in 'RoomsController#index'
+Completed 200 OK in 53ms (Views: 12.6ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started POST "/room" for 127.0.0.1 at 2025-05-23 18:45:02 +0700
+Processing by RoomsController#create as */*
+  Parameters: {"name" => "Test Room"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:10:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mRoom Exists? (4.7ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'Test Room' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+Completed 200 OK in 187ms (Views: 0.4ms | ActiveRecord: 8.7ms (2 queries, 0 cached) | GC: 4.1ms)
+
+
+Started POST "/room" for 127.0.0.1 at 2025-05-23 18:45:40 +0700
+Processing by RoomsController#create as */*
+  Parameters: {"name" => "Test Room"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:10:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mRoom Exists? (5.3ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'Test Room' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+Completed 200 OK in 128ms (Views: 0.3ms | ActiveRecord: 9.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/room" for 127.0.0.1 at 2025-05-23 18:47:25 +0700
+Processing by RoomsController#create as */*
+  Parameters: {"name" => "Test Room"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:10:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mRoom Exists? (4.0ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'Test Room' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+Completed 200 OK in 166ms (Views: 0.4ms | ActiveRecord: 19.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/room" for 127.0.0.1 at 2025-05-23 18:49:36 +0700
+Processing by RoomsController#create as */*
+  Parameters: {"name" => "Test Room"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:10:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mRoom Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'Test Room' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mRoom Create (0.8ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "participant_1_id", "participant_2_id", "created_at", "updated_at") VALUES ('Test Room', NULL, NULL, '2025-05-23 11:49:36.360302', '2025-05-23 11:49:36.360302') RETURNING "id" /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'RoomsController#create'
+Completed 200 OK in 119ms (Views: 1.4ms | ActiveRecord: 12.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/room" for 127.0.0.1 at 2025-05-23 18:53:20 +0700
+Processing by RoomsController#create as */*
+  Parameters: {"target" => "1"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" = '_6yPsu7tp-4' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:10:in 'RoomsController#create'
+  [1m[36mRoom Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'fXYA0xlxpmS4CmM40FsaMw' LIMIT 1 /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:14:in 'block in RoomsController#create'
+  [1m[36mCACHE Room Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "rooms" WHERE "rooms"."name" = 'fXYA0xlxpmS4CmM40FsaMw' LIMIT 1[0m
+  ↳ app/controllers/rooms_controller.rb:16:in 'RoomsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:16:in 'RoomsController#create'
+  [1m[36mRoom Create (4.3ms)[0m  [1m[32mINSERT INTO "rooms" ("name", "participant_1_id", "participant_2_id", "created_at", "updated_at") VALUES ('fXYA0xlxpmS4CmM40FsaMw', 2, 1, '2025-05-23 11:53:21.156567', '2025-05-23 11:53:21.156567') RETURNING "id" /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:16:in 'RoomsController#create'
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='ApiTalsksiekopedia',controller='rooms'*/[0m
+  ↳ app/controllers/rooms_controller.rb:16:in 'RoomsController#create'
+Completed 200 OK in 116ms (Views: 1.1ms | ActiveRecord: 12.5ms (4 queries, 1 cached) | GC: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 18:53:53 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_2_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:6:in 'UsersController#index'
+Completed 200 OK in 176ms (Views: 145.3ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 61.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2025-05-23 19:16:40 +0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (185.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."passcode" != '_6yPsu7tp-4' /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#index'
+  [1m[36mRoom Load (1.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_1_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#index'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."participant_2_id" = 1 /*action='index',application='ApiTalsksiekopedia',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:5:in 'UsersController#index'
+Completed 200 OK in 585ms (Views: 7.6ms | ActiveRecord: 186.7ms (3 queries, 0 cached) | GC: 93.7ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRoomMessages (20250520155950)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (3.1ms)[0m  [1m[35mDROP TABLE "room_messages" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250520155950' /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (5.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRooms (20250520155616)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mDROP INDEX "index_rooms_on_name" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "rooms" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250520155616' /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mDROP INDEX "index_users_on_name" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "users" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250520151031' /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateUsers (20250520151031)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "avatar" varchar, "passcode" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_name" ON "users" ("name") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520151031') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRooms (20250520155616)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "rooms" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "participant_1_id" integer, "participant_2_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_31d2705a4f"
+FOREIGN KEY ("participant_1_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ece5fc565c"
+FOREIGN KEY ("participant_2_id")
+  REFERENCES "users" ("id")
+) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_rooms_on_participant_1_id" ON "rooms" ("participant_1_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_rooms_on_participant_2_id" ON "rooms" ("participant_2_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_rooms_on_name" ON "rooms" ("name") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520155616') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+Migrating to CreateRoomMessages (20250520155950)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "room_messages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer NOT NULL, "user_id" integer NOT NULL, "message" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8ed44f6e34"
+FOREIGN KEY ("room_id")
+  REFERENCES "rooms" ("id")
+, CONSTRAINT "fk_rails_76bc7b974e"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_room_messages_on_room_id" ON "room_messages" ("room_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_room_messages_on_user_id" ON "room_messages" ("user_id") /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250520155950') RETURNING "version" /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='ApiTalsksiekopedia'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ApiTalsksiekopedia'*/[0m
